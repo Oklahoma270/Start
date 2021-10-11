@@ -1,0 +1,55 @@
+table 
+
+{ 
+    border: 4px solid #000; 
+    background-color: rgb(204, 204, 204);
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+#prima_riga {
+    border: 2px solid #000;
+    background-color: rgb(20, 88, 236);
+}
+ 
+#seconda_riga {
+    background-color: rgb(54, 229, 241);
+}
+#terza_riga {
+    background-color: rgb(42, 20, 236);
+}
+ 
+#quarta_riga {
+    background-color: rgb(54, 229, 241);
+}
+#quinta_riga {
+    background-color: rgb(42, 20, 236);
+}
+#sesta_riga {
+    background-color: rgb(54, 229, 241);
+}
+
+#primariga {
+    border: 4px solid #000;
+    background-color: rgb(54, 229, 241);
+}
+ 
+#secondariga {
+    background-color: rgb(255, 231, 20);
+}
+#terzariga {
+    background-color: rgb(54, 229, 241);
+}
+ 
+#quartariga {
+    background-color: rgb(255, 231, 20);
+}
+#quintariga {
+    background-color: rgb(54, 229, 241);
+}
+#sestariga {
+    background-color: rgb(255, 231, 20);
+}
+#settimariga {
+    background-color: rgb(54, 229, 241);
+}
+
