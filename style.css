@@ -25,7 +25,12 @@ table {
     font-weight: bold;
 }
 
-.header_tabella td {
+#tab1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tab1 tr td {
     padding: 10px;
 }
 
