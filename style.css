@@ -80,7 +80,10 @@ ul {
   }
 
     .formtab {
-            background-color: rgb(236, 236, 236);
-            border: black 2px;
-            margin: auto
+            color: rgb(0, 0, 0);
+            padding: 8px; 
+            font-weight: bold;  
+            background-color: rgb(165, 165, 165);
+            margin-right: 985px;
+            margin-left: auto;
 }

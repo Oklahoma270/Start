@@ -10,64 +10,80 @@
 	<script type="text/javascript">
 	</script>
 </head>
+
 <body>
 	<ul>
 		<li><a href="index.html">Home</a></li>
 		<li><a href="contact.html">Contact Us</a></li>
 	</ul>
-<table id="tab1">
+	<table id="tab1">
 
-	<tr class="riga_tile">
-		<td>ID</td>
-		<td>Nome</td>
-		<td>Cognome</td>
-		<td>Età</td>
-		<td>Città</td>
-	</tr>
-	<tr class="riga_pari">
-		<td>1</td>
-		<td>Mario</td>
-		<td>Marini</td>
-		<td>33</td>
-		<td>Marina di Ragusa</td>
-	</tr>
-	<tr class="riga_dispari">
-		<td>2</td>
-		<td>Paolo</td>
-		<td>Paolini</td>
-		<td>30</td>
-		<td>Milano</td>
-	</tr>
-	<tr class="riga_pari quartariga">
-		<td>3</td>
-		<td>Gianni</td>
-		<td>Giannini </td>
-		<td>54</td>
-		<td>Roma</td>
-	</tr>
-	<tr class="riga_dispari">
-		<td>4</td>
-		<td>Gianmichael</td>
-		<td>Renzi</td>
-		<td>29</td>
-		<td>Padova</td>
-	</tr>
-	<tr class="riga_pari">
-		<td>5</td>
-		<td>Don</td>
-		<td>Matteo</td>
-		<td>65</td>
-		<td>Gubbio</td>
-	</tr>
+		<tr class="riga_tile">
+			<td>ID</td>
+			<td>Nome</td>
+			<td>Cognome</td>
+			<td>Età</td>
+			<td>Città</td>
+		</tr>
+		<tr class="riga_pari">
+			<td>1</td>
+			<td>Mario</td>
+			<td>Marini</td>
+			<td>33</td>
+			<td>Marina di Ragusa</td>
+		</tr>
+		<tr class="riga_dispari">
+			<td>2</td>
+			<td>Paolo</td>
+			<td>Paolini</td>
+			<td>30</td>
+			<td>Milano</td>
+		</tr>
+		<tr class="riga_pari quartariga">
+			<td>3</td>
+			<td>Gianni</td>
+			<td>Giannini </td>
+			<td>54</td>
+			<td>Roma</td>
+		</tr>
+		<tr class="riga_dispari">
+			<td>4</td>
+			<td>Gianmichael</td>
+			<td>Renzi</td>
+			<td>29</td>
+			<td>Padova</td>
+		</tr>
+		<tr class="riga_pari">
+			<td>5</td>
+			<td>Don</td>
+			<td>Matteo</td>
+			<td>65</td>
+			<td>Gubbio</td>
+		</tr>
 
-</table>
 
-	<form method="GET" action="whatever" class="formtab">
-	   <input type="text"/>Nome
-	   <input type="text"/>Cognome
-	   <input type="text"/>Città
-	   <input type="text"/>Età
-   </form>
+
+
+	</table>
+
+	<form action="tab1.html" method="get">
+
+		<fieldset>
+			<legend>Aggiungi Nome</legend>
+			<label>
+				Nome <input type="text" /></label>
+			<label>
+				Cognome <input type="text" /></label>
+			<label>
+				Età <input type="text" /></label>
+			<label>
+				Città<input type="text" /></label>
+			<input type="submit">
+		</fieldset>
+
+	</form>
+
+
 
 
 </body>
