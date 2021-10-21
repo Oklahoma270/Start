@@ -7,8 +7,7 @@
 
 	<title>Sebastiano</title>
 
-	<script type="text/javascript">
-	</script>
+	<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -61,29 +60,41 @@
 			<td>Gubbio</td>
 		</tr>
 
-
-
-
 	</table>
 
-	<form action="tab1.html" method="get">
+	<form method="get">
 
 		<fieldset>
-			<legend>Aggiungi Nome</legend>
+			<legend>Aggiungi Persona</legend>
 			<label>
-				Nome <input type="text" /></label>
+				Nome <input id="nome" type="text" /></label>
 			<label>
-				Cognome <input type="text" /></label>
+				Cognome <input id="cognome" ttype="text" /></label>
 			<label>
-				Età <input type="text" /></label>
+				Età <input id="eta" ttype="text" /></label>
 			<label>
-				Città<input type="text" /></label>
-			<input type="submit">
+				Città<input id="citta" ttype="text" /></label>
+			<button type="button" onclick="salvaPersona()">Salva persona</button>
 		</fieldset>
 
 	</form>
 
-
-
+	<script>
+		function salvaPersona() {
+			let nome = $("#nome").val();
+			let cognome = $("#cognome").val();
+			let eta = $("#eta").val();
+			let citta = $("#citta").val();
+			$("#tab1").append(
+				'<tr class="riga_dispari">' + 
+					'<td>000</td>' + 
+					'<td>' + nome + '</td>' + 
+					'<td>' + cognome + '</td>' + 
+					'<td>' + eta + '</td>' + 
+					'<td>' + citta + '</td>' + 
+				'</tr>'
+			);
+		}
+	</script>
 
 </body>
