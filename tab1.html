@@ -15,52 +15,8 @@
 		<li><a href="index.html">Home</a></li>
 		<li><a href="contact.html">Contact Us</a></li>
 	</ul>
-	<table id="tab1">
 
-		<tr class="riga_tile">
-			<td>ID</td>
-			<td>Nome</td>
-			<td>Cognome</td>
-			<td>Età</td>
-			<td>Città</td>
-		</tr>
-		<tr class="riga_pari">
-			<td>1</td>
-			<td>Mario</td>
-			<td>Marini</td>
-			<td>33</td>
-			<td>Marina di Ragusa</td>
-		</tr>
-		<tr class="riga_dispari">
-			<td>2</td>
-			<td>Paolo</td>
-			<td>Paolini</td>
-			<td>30</td>
-			<td>Milano</td>
-		</tr>
-		<tr class="riga_pari quartariga">
-			<td>3</td>
-			<td>Gianni</td>
-			<td>Giannini </td>
-			<td>54</td>
-			<td>Roma</td>
-		</tr>
-		<tr class="riga_dispari">
-			<td>4</td>
-			<td>Gianmichael</td>
-			<td>Renzi</td>
-			<td>29</td>
-			<td>Padova</td>
-		</tr>
-		<tr class="riga_pari">
-			<td>5</td>
-			<td>Don</td>
-			<td>Matteo</td>
-			<td>65</td>
-			<td>Gubbio</td>
-		</tr>
-
-	</table>
+	<table id="tab1"></table>
 
 	<form method="get">
 
@@ -72,29 +28,89 @@
 				Cognome <input id="cognome" ttype="text" /></label>
 			<label>
 				Età <input id="eta" ttype="text" /></label>
-			<label>
-				Città<input id="citta" ttype="text" /></label>
 			<button type="button" onclick="salvaPersona()">Salva persona</button>
 		</fieldset>
 
 	</form>
 
 	<script>
-		function salvaPersona() {
-			let nome = $("#nome").val();
-			let cognome = $("#cognome").val();
-			let eta = $("#eta").val();
-			let citta = $("#citta").val();
+		// Creiamo la prima persona
+		let persona1 = {
+			nome : "Mario",
+			cognome : "Marini",
+			eta : 33
+		};
+
+		// Creiamo la seconda persona
+		let persona2 = {
+			nome : "Paolo",
+			cognome : "Paolini",
+			eta : 30
+		};
+
+		// Creiamo la terza persona
+		let persona3 = {
+			nome : "Gianni",
+			cognome : "Giannini",
+			eta : 54
+		};
+
+		// Creiamo la quarta persona
+		let persona4 = {
+			nome : "Don",
+			cognome : "Matteo",
+			eta : 21
+		};
+
+		// Creiamo la lista persone
+		let arrayPersone = [persona1, persona2, persona3, persona4];
+
+
+		
+		// DICHIARAZIONE FUNZIONE RENDERTABLE (NON LA ESEGUE; DICHIARA SOLO)
+		function renderTable() {
+			// Reset tabella
+			$("#tab1").html("");
+
+			// Creazione header tabella
 			$("#tab1").append(
-				'<tr class="riga_dispari">' + 
-					'<td>000</td>' + 
-					'<td>' + nome + '</td>' + 
-					'<td>' + cognome + '</td>' + 
-					'<td>' + eta + '</td>' + 
-					'<td>' + citta + '</td>' + 
+				'<tr class="riga_tile">' + 
+					'<td>Nome</td>' + 
+					'<td>Cognome</td>' + 
+					'<td>Età</td>' +
 				'</tr>'
 			);
+			
+			// Cicliamo la lista persone, per ogni persona presente nella lista eseguiamo il codice dentro
+			arrayPersone.forEach(function (persona) {
+				// Per ogni "persona" di "arrayPersone"
+				$("#tab1").append(
+					'<tr class="riga_dispari">' + 
+						'<td>' + persona.nome + '</td>' + 
+						'<td>' + persona.cognome + '</td>' + 
+						'<td>' + persona.eta + '</td>' +
+					'</tr>'
+				);
+			});
 		}
+		
+
+		// Funzione invocata dal form per salvare una nuova persona
+		function salvaPersona() {
+			let nuovaPersona = {
+				nome : $("#nome").val(),
+				cognome : $("#cognome").val(),
+				eta : $("#eta").val()
+			};
+			arrayPersone.push(nuovaPersona);
+
+			// Chiamo il render e ricarico la tabella
+			renderTable();
+		}
+
+
+		// ESECUZIONE DELLA FUNZIONE CREATA; CHIAMATA DELLA FUNZIONE RENDERTABLE
+		renderTable();
 	</script>
 
 </body>
